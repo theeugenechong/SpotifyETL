@@ -16,7 +16,7 @@ spotify = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
 
 
 def gather_data(aws=False):
-    filepath = '/tmp/viral_hits.csv' if aws else 'viral_hits.csv'
+    filepath = 'viral_hits.csv'
 
     with open(filepath, 'w') as file:
         header = HEADERS
@@ -27,10 +27,10 @@ def gather_data(aws=False):
             playlist = spotify.playlist_tracks(target_playlists()[target_playlist])
             write_playlist_tracks_to_csv(writer, playlist)
 
-        if aws:
-            date = datetime.now()
-            s3_file_name = f'{date.year}/{date.month:02d}/{date.day:02d}/viral_hits.csv'
-            upload_file(filepath, BUCKET_NAME, s3_file_name)
+    if aws:
+        date = datetime.now()
+        s3_file_name = f'{date.year}/{date.month:02d}/{date.day:02d}/viral_hits.csv'
+        upload_file(filepath, BUCKET_NAME, s3_file_name)
             
 
 def write_playlist_tracks_to_csv(csv_writer, playlist):
@@ -81,4 +81,4 @@ def lambda_handler(event, context):
 
 
 if __name__ == "__main__":
-    gather_data()
+    gather_data(aws=True)
