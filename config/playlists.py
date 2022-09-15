@@ -8,6 +8,3 @@ def target_playlists():
         'viral_hits': 'spotify:playlist:37i9dQZF1DX2L0iB23Enbq'
     }
     return playlists
-
-# def get_artists_from_playlist(playlist_uri):
-
