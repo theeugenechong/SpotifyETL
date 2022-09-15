@@ -1,4 +1,3 @@
-from ast import main
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 from config.playlists import target_playlists
