@@ -18,7 +18,7 @@ SpotifyETL extracts information about the latest, trending tracks, specifically 
 | Song Title | Not needed, but useful for future queries |
 | Artist Name | Name of main artist  |
 | Artist Genre | To analyze what song genres go viral |
-| Popularity of artist | From Spotify Docs: The artist's popularity is calculated from the popularity of all the artist's tracks. The popularity score allows us to see how many of these TikTok hits are one-hit wonders, from a well-known artist, etc. |
+| Popularity of artist | From Spotify Docs: _The artist's popularity is calculated from the popularity of all the artist's tracks._ The popularity score allows us to see how many of these TikTok hits are one-hit wonders, from a well-known artist, etc. |
 
 ## Architecture
 ![Architecture](/img/architecture.png)
