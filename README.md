@@ -3,12 +3,12 @@
 ## Description
 A simple ETL data pipeline which extracts data from Spotify's Web API, specifically data on the latest hits and builds a datalake on an S3 bucket.
 
-This datalake is built on a weekly basis with AWS Cloudwatch, which runs an AWS Lambda function every week.
+This datalake is built on a weekly basis with AWS CloudWatch, which runs an AWS Lambda function every week.
 
 SpotifyETL employs the use of Terraform, an "infrastructure as code" tool to:
  - define IAM roles and policies
- - specify the AWS lambda function to be performed for data extraction
- - configure the AWS Cloudwatch alarm to run the lambda function weekly
+ - specify the AWS Lambda function to be performed for data extraction
+ - configure the AWS CloudWatch alarm to run the lambda function weekly
 
 ## How Can This Data be Used?
 SpotifyETL extracts information about the latest, trending tracks, specifically from Spotify's playlist 'Viral Hits'. The type of information extracted is as follows:
