@@ -36,4 +36,4 @@ python viral_hits.py
 Running the following command will generate a `.csv` file locally containing data on tracks currently in the 'Viral Hits' playlist on Spotify.
 
 ### Running on the cloud
-Based on how Terraform has been configured, the AWS lambda function runs the `lambda_handler()` method in `viral_hits.py` and uploads the generated csv to an S3 bucket.
+Based on how Terraform has been configured, the AWS lambda function runs the [`lambda_handler()`](https://github.com/theeugenechong/SpotifyETL/blob/c357210be5dd7e00e69f7e6ebde3243cffc4b3c1/viral_hits.py#L72) method in `viral_hits.py` and uploads the generated csv to an S3 bucket.
